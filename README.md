@@ -30,7 +30,7 @@ Bienvenido al curso. Aquí encontrarás todo lo que necesitas para seguir la ses
 
 ---
 
-## Herramientas y recursos
+## <font color="#179287">Herramientas y recursos</font>
 
 | Recurso | Enlace |
 |---|---|
@@ -41,7 +41,7 @@ Bienvenido al curso. Aquí encontrarás todo lo que necesitas para seguir la ses
 
 ---
 
-## Antes de empezar — Requisitos
+## <font color="#179287">Antes de empezar — Requisitos</font>
 
 - [ ] Laptop con Git instalado
 - [ ] GitKraken instalado
@@ -50,9 +50,9 @@ Bienvenido al curso. Aquí encontrarás todo lo que necesitas para seguir la ses
 
 ---
 
-## Guía paso a paso para el alumno
+## <font color="#179287">Guía paso a paso para el alumno</font>
 
-### Bloque 1 — Introducción *(teoría)*
+### <font color="#F05032">Bloque 1 — Introducción *(teoría)*</font>
 
 Esta parte es solo de escuchar y observar. El instructor explicará:
 
@@ -62,7 +62,7 @@ Esta parte es solo de escuchar y observar. El instructor explicará:
 
 ---
 
-### Bloque 2 — Setup e interfaz *(teoría)*
+### <font color="#F05032">Bloque 2 — Setup e interfaz *(teoría)*</font>
 
 El instructor hará un tour en vivo. Observa dónde están:
 
@@ -74,7 +74,7 @@ El instructor hará un tour en vivo. Observa dónde están:
 
 ---
 
-### Bloque 3 — Conceptos fundamentales *(teoría)*
+### <font color="#F05032">Bloque 3 — Conceptos fundamentales *(teoría)*</font>
 
 Tres ideas clave antes de tocar código:
 
@@ -86,7 +86,7 @@ Tres ideas clave antes de tocar código:
 
 ---
 
-### Bloque 4 — Primer repositorio + commits *(individual)*
+### <font color="#F05032">Bloque 4 — Primer repositorio + commits *(individual)*</font>
 
 **Paso 1 — Crea una carpeta para tu proyecto**
 1. En tu computadora, crea una carpeta nueva (ejemplo: `mi-proyecto-git`)
@@ -111,7 +111,7 @@ Tres ideas clave antes de tocar código:
 
 ---
 
-### Bloque 5 — Ramas (branches) *(individual)*
+### <font color="#F05032">Bloque 5 — Ramas (branches) *(individual)*</font>
 
 Una **rama** es como una línea de tiempo alterna: puedes hacer cambios sin afectar `main`.
 
@@ -135,7 +135,7 @@ Una **rama** es como una línea de tiempo alterna: puedes hacer cambios sin afec
 
 ---
 
-### Bloque 6 — Push y Pull *(individual)*
+### <font color="#F05032">Bloque 6 — Push y Pull *(individual)*</font>
 
 Ahora subiremos el repositorio local a GitHub.
 
@@ -152,7 +152,7 @@ Ahora subiremos el repositorio local a GitHub.
 
 ---
 
-### Bloque 7 — Fork + Pull Request *(equipos)* 
+### <font color="#F05032">Bloque 7 — Fork + Pull Request *(equipos)*</font>
 
 **Fork:** copiar un repositorio ajeno a tu cuenta para poder modificarlo.
 
@@ -173,7 +173,7 @@ Ahora subiremos el repositorio local a GitHub.
 
 ---
 
-### Bloque 8 — Resolviendo conflictos *(equipos)* 
+### <font color="#F05032">Bloque 8 — Resolviendo conflictos *(equipos)*</font>
 
 Un **conflicto** ocurre cuando dos personas modifican la misma línea del mismo archivo en ramas distintas.
 
@@ -192,13 +192,13 @@ Un **conflicto** ocurre cuando dos personas modifican la misma línea del mismo 
 
 ---
 
-### Bloque 9 — Mini proyecto integrador *(equipos)*
+### <font color="#F05032">Bloque 9 — Mini proyecto integrador *(equipos)*</font>
 
 **Reto final en equipos:**
 
 1. Clona el repositorio del instructor desde GitKraken
 2. Crea una rama con el nombre de tu equipo (ejemplo: `equipo-dinamita`)
-3. Abre el archivo `answers-box/equipo-dinamita.md` en VS Code
+3. Abre el archivo `box-answers/equipo-dinamita.md` en VS Code
 4. Completa las siguientes preguntas **en equipo**:
    - ¿Qué es la ingeniería de software?
    - ¿Qué son las soft skills?
@@ -210,7 +210,7 @@ Un **conflicto** ocurre cuando dos personas modifican la misma línea del mismo 
 
 ---
 
-## Recursos para seguir practicando
+## <font color="#179287">Recursos para seguir practicando</font>
 
 - [GitHub Learning Lab](https://github.com/apps/github-learning-lab) — tutoriales interactivos directamente en GitHub
 - [Oh My Git!](https://ohmygit.org/) — juego visual para aprender Git
