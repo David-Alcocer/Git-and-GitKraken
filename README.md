@@ -1,6 +1,6 @@
 <div align="center">
 
-# Curso Básico: Git & GitHub con GitKraken desde Cero
+# Curso Básico: Git para Principiantes
 
 Bienvenido al curso. Aquí encontrarás todo lo que necesitas para seguir la sesión y repasar cada paso por tu cuenta.
 
@@ -14,8 +14,6 @@ Bienvenido al curso. Aquí encontrarás todo lo que necesitas para seguir la ses
   <img src="images/25231.png" width="80" alt="GitHub" />
 </a>
 &nbsp;&nbsp;&nbsp;&nbsp;
-<a href="https://gitkraken.com/lp/e3?source=paid_search&utm_term=gitkraken%20download&utm_campaign=GKC+-+Search+-+Brand&utm_source=adwords&utm_medium=ppc&hsa_acc=1130375851&hsa_cam=14828190375&hsa_grp=126688158646&hsa_ad=553348991700&hsa_src=g&hsa_tgt=aud-1418244009334:kwd-411089619722&hsa_kw=gitkraken%20download&hsa_mt=b&hsa_net=adwords&hsa_ver=3&gad_source=1&gad_campaignid=14828190375&gbraid=0AAAAADeUjDHUb2KTAn88pYPO78pDSql8B&gclid=Cj0KCQjw16_UBhCqARIsAIdOaXwU9agrVr_Auja811Gk-247_Zp0KrWhDp82uULJa-gCzxAcGSochmUaAq-HEALw_wcB" title="Descargar GitKraken">
-  <img src="images/gitkraken-logo-dark-sq.png" width="80" alt="GitKraken" />
 </a>
 
 </div>
@@ -25,7 +23,7 @@ Bienvenido al curso. Aquí encontrarás todo lo que necesitas para seguir la ses
 <div align="center">
   <img src="images/Negativo blanco.png" width="400" alt="Wewolf" />
   <br><br>
-  <em>Curso organizado por Wewolf</em>
+  <em>Curso organizado por Wewolf x Vinculacion FMAT</em>
 </div>
 
 ---
@@ -36,17 +34,17 @@ Bienvenido al curso. Aquí encontrarás todo lo que necesitas para seguir la ses
 |---|---|
 | Presentación del curso (Canva) | [Abrir presentación](https://canva.link/wh9mf15zqpmq94i) |
 | Descargar Git | [git-scm.com/install](https://git-scm.com/install/) |
-| Descargar GitKraken | [gitkraken.com](https://gitkraken.com/lp/e3?source=paid_search&utm_term=gitkraken%20download&utm_campaign=GKC+-+Search+-+Brand&utm_source=adwords&utm_medium=ppc&hsa_acc=1130375851&hsa_cam=14828190375&hsa_grp=126688158646&hsa_ad=553348991700&hsa_src=g&hsa_tgt=aud-1418244009334:kwd-411089619722&hsa_kw=gitkraken%20download&hsa_mt=b&hsa_net=adwords&hsa_ver=3&gad_source=1&gad_campaignid=14828190375&gbraid=0AAAAADeUjDHUb2KTAn88pYPO78pDSql8B&gclid=Cj0KCQjw16_UBhCqARIsAIdOaXwU9agrVr_Auja811Gk-247_Zp0KrWhDp82uULJa-gCzxAcGSochmUaAq-HEALw_wcB) |
 | Crear cuenta en GitHub | [github.com](https://github.com) |
+| Descargar Github Desktop | [Github Desktop](https://desktop.github.com/download/) |
 
----
+
 
 ## <font color="#179287">Antes de empezar — Requisitos</font>
 
 - [ ] Laptop con Git instalado
-- [ ] GitKraken instalado
 - [ ] VS Code instalado
 - [ ] Cuenta de GitHub creada y correo verificado
+- [ ] Cuenta de GitHub Desktop vinculada
 
 ---
 
