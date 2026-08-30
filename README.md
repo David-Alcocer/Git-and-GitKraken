@@ -35,6 +35,8 @@ Bienvenido al curso. Aquí encontrarás todo lo que necesitas para seguir la ses
 | Crear cuenta en GitHub | [github.com](https://github.com) |
 | Descargar GitHub Desktop | [desktop.github.com](https://desktop.github.com/download/) |
 | Descargar VS Code | [code.visualstudio.com](https://code.visualstudio.com/) |
+| Extensión GitLens | Buscar `GitLens` en VS Code → Extensions (`Ctrl+Shift+X`) |
+| Extensión Git Graph | Buscar `Git Graph` en VS Code → Extensions (`Ctrl+Shift+X`) |
 
 ---
 
@@ -44,6 +46,7 @@ Bienvenido al curso. Aquí encontrarás todo lo que necesitas para seguir la ses
 - [ ] VS Code instalado
 - [ ] Cuenta de GitHub creada y correo verificado
 - [ ] GitHub Desktop instalado y cuenta vinculada
+- [ ] Extensiones de VS Code instaladas: **GitLens** y **Git Graph**
 
 ---
 
@@ -170,6 +173,16 @@ Tres ideas clave antes de empezar:
 
 **Ejercicio:** agrega contenido nuevo a `mi-perfil.md` y repite los pasos 1–4 hasta tener **3 o 4 commits**. Observa cómo el historial crece con cada uno.
 
+> **Así se ve tu historial hasta ahora:**
+
+```mermaid
+gitGraph
+   commit id: "Agrego mi perfil"
+   commit id: "Agrego sección sobre mí"
+   commit id: "Agrego frase favorita"
+   commit id: "Actualizo mi progreso"
+```
+
 ---
 
 ### <font color="#F05032">Bloque 5 — Ramas (branches) *(individual)*</font>
@@ -181,6 +194,19 @@ Una **rama** es como una línea de tiempo alterna: puedes hacer cambios sin afec
 2. Escribe el nombre (ejemplo: `feature/nueva-seccion`) → `Create Branch`
 3. Verás que la rama activa cambia en la barra superior
 
+> **Así se ve la bifurcación en el historial:**
+
+```mermaid
+gitGraph
+   commit id: "commit en main"
+   commit id: "otro commit en main"
+   branch feature/nueva-seccion
+   checkout feature/nueva-seccion
+   commit id: "cambio 1 en la rama"
+   commit id: "cambio 2 en la rama"
+   checkout main
+```
+
 **Paso 2 — Haz cambios en la rama nueva**
 1. Abre `mi-perfil.md` en VS Code
 2. Agrega una nueva sección (ver actividad abajo)
@@ -191,6 +217,19 @@ Una **rama** es como una línea de tiempo alterna: puedes hacer cambios sin afec
 2. Desde el menú: `Branch` → `Merge into Current Branch`
 3. Selecciona tu rama (`feature/nueva-seccion`) → `Create a merge commit`
 4. En **History** verás cómo se unieron los dos caminos
+
+> **Así se ve el merge:**
+
+```mermaid
+gitGraph
+   commit id: "commit en main"
+   branch feature/nueva-seccion
+   checkout feature/nueva-seccion
+   commit id: "cambio 1"
+   commit id: "cambio 2"
+   checkout main
+   merge feature/nueva-seccion id: "Merge"
+```
 
 ---
 
@@ -233,10 +272,18 @@ Ahora subiremos el repositorio local a GitHub.
 
 **Paso 2 — Verifica en GitHub**
 1. Ve a [github.com](https://github.com) y abre tu repositorio
-2. Confirma que `mi-perfil.md` aparece con todo tu contenido — eso es todo lo que harás aquí, solo verificar
+2. Confirma que `mi-perfil.md` aparece con todo tu contenido
 3. Regresa a GitHub Desktop: cada vez que hagas cambios nuevos, haz clic en **Push origin** para sincronizar
 
-> **¿Y el Pull?** Pull es la operación inversa: trae cambios del servidor a tu máquina. Lo practicarás en los bloques de equipo cuando un compañero suba algo y tú lo tengas que recibir.
+> **Push, Fetch y Pull — la calle en dos direcciones:**
+
+| Acción | Qué hace | Cuándo usarla |
+|---|---|---|
+| **Push** | Envía tus commits locales a GitHub | Cuando quieres subir tus cambios |
+| **Fetch** | Revisa si hay cambios en GitHub, sin traerlos aún | Para asomarte sin modificar nada local |
+| **Pull** | Trae los cambios de GitHub a tu computadora | Cuando quieres recibir lo que otros subieron |
+
+> Fetch = "mirar el buzón". Pull = "meter las cartas a tu escritorio".
 
 ---
 
@@ -262,7 +309,52 @@ Lo que me quedó más claro fue:
 
 ---
 
-### <font color="#F05032">Bloque 7 — Fork + colaboración en equipo + Pull Request *(equipos)*</font>
+### <font color="#F05032">Bloque 7 — Viajando en el historial *(individual)*</font>
+
+Git guarda cada commit como un punto en el tiempo. Puedes visitar cualquiera de ellos sin romper el presente.
+
+**Ver el historial en GitHub Desktop**
+1. Ve a la pestaña **History**
+2. Haz clic en cualquier commit para ver exactamente qué cambió (verde = agregado, rojo = quitado)
+
+**Ver quién escribió cada línea con GitLens**
+1. Abre `mi-perfil.md` en VS Code
+2. Pasa el cursor sobre cualquier línea — aparecerá quién la escribió y cuándo
+3. Esto se llama **blame** y es muy útil para entender por qué está ese texto ahí
+
+**Ver el árbol de ramas con Git Graph**
+1. En VS Code, abre la paleta de comandos (`Ctrl+Shift+P` / `Cmd+Shift+P`)
+2. Escribe `Git Graph: View Git Graph` y selecciónalo
+3. Verás un mapa visual de todos tus commits y ramas
+
+> **Mirar el historial no cambia nada.** Es como pausar un video en un minuto exacto: puedes ver ese fotograma y después seguir desde donde estás.
+
+```mermaid
+gitGraph
+   commit id: "C1 — puedes verlo"
+   commit id: "C2 — puedes verlo"
+   commit id: "C3 — puedes verlo"
+   commit id: "C4 — aquí estás ahora (HEAD)"
+```
+
+---
+
+### <font color="#F05032">Bloque 8 — Si algo sale mal *(individual)*</font>
+
+Antes de trabajar en equipo, conoce los botones de "deshacer". Git tiene uno para cada situación:
+
+| Situación | Qué usar | Dónde está |
+|---|---|---|
+| Guardaste el archivo pero **no hiciste commit** | **Discard changes** | Clic derecho sobre el archivo en *Changes* → GitHub Desktop |
+| Hiciste commit pero **no hiciste push** | **Undo commit** | Botón "Undo" que aparece justo después de comitear en GitHub Desktop |
+| Estás en medio de un merge conflictivo y quieres cancelar todo | **Abort merge** | Botón visible en GitHub Desktop durante el conflicto |
+| Ya hiciste push y el commit está en GitHub | **Revert commit** | Clic derecho sobre el commit en *History* → Revert |
+
+> **Revert no borra la historia** — crea un commit nuevo que deshace el anterior. Es la opción más segura cuando ya compartiste tus cambios con otros.
+
+---
+
+### <font color="#F05032">Bloque 9 — Fork + colaboración en equipo + Pull Request *(equipos)*</font>
 
 **Fork:** copiar un repositorio ajeno a tu cuenta para poder modificarlo junto con tu equipo.
 
@@ -317,7 +409,7 @@ Lo que me quedó más claro fue:
 
 ---
 
-### <font color="#F05032">Bloque 8 — Resolviendo conflictos *(equipos)*</font>
+### <font color="#F05032">Bloque 10 — Resolviendo conflictos *(equipos)*</font>
 
 Un **conflicto** ocurre cuando dos personas modifican la misma línea del mismo archivo en ramas distintas.
 
@@ -326,6 +418,20 @@ Un **conflicto** ocurre cuando dos personas modifican la misma línea del mismo 
 2. Cada uno crea su propia rama desde ahí y modifica **la misma línea** del archivo `answers-box/equipo-[nombre].md`
 3. El primero hace commit, push y merge a la rama del equipo — sin problema
 4. El segundo hace commit y push — GitHub Desktop le avisa del conflicto al intentar hacer merge
+
+> **Por qué ocurre el conflicto:**
+
+```mermaid
+gitGraph
+   commit id: "Base compartida"
+   branch rama-persona-B
+   checkout main
+   commit id: "Persona A edita línea X"
+   checkout rama-persona-B
+   commit id: "Persona B edita la misma línea X"
+   checkout main
+   merge rama-persona-B id: "Conflicto aquí"
+```
 
 **Paso 2 — Resuelve el conflicto**
 1. GitHub Desktop mostrará un mensaje de conflicto con un botón **Open in Visual Studio Code**
@@ -343,13 +449,15 @@ Esta es la versión de mi compañero
 4. Guarda el archivo en VS Code
 5. Regresa a GitHub Desktop → haz clic en **Continue Merge** → luego commit
 
+> **Si el conflicto da pánico**, recuerda el Bloque 8: puedes hacer **Abort merge** y volver al estado anterior sin perder nada.
+
 ---
 
-### <font color="#F05032">Bloque 9 — Mini proyecto integrador *(equipos)*</font>
+### <font color="#F05032">Bloque 11 — Mini proyecto integrador *(equipos)*</font>
 
 **Reto final en equipos:**
 
-> Continúan en el mismo fork del Bloque 7 — no necesitan clonar nada nuevo. El líder ya tiene el fork y todos los compañeros ya lo tienen clonado.
+> Continúan en el mismo fork del Bloque 9 — no necesitan clonar nada nuevo. El líder ya tiene el fork y todos los compañeros ya lo tienen clonado.
 
 1. En GitHub Desktop, asegúrate de estar en la rama `equipo-[nombre]` del fork
 2. En VS Code, completa (o termina de completar) el archivo `answers-box/equipo-[nombre].md`
