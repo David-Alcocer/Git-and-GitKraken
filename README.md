@@ -157,14 +157,19 @@ Tres ideas clave antes de empezar:
 
 ### <font color="#F05032">Bloque 4 — Primer repositorio + commits *(individual)*</font>
 
-**Paso 1 — Crea una carpeta para tu proyecto**
-1. En tu computadora, crea una carpeta nueva (ejemplo: `mi-proyecto-git`)
-2. Mueve tu archivo `mi-perfil.md` dentro de esa carpeta
-
-**Paso 2 — Inicia el repositorio en GitHub Desktop**
+**Paso 1 — Crea el repositorio en GitHub Desktop**
 1. Abre GitHub Desktop → `File` → `New Repository`
-2. En **Local Path**, selecciona la carpeta que creaste → clic en `Create Repository`
-3. GitHub Desktop mostrará el repositorio listo en el panel principal
+2. En **Name** escribe el nombre de tu proyecto (ejemplo: `mi-proyecto-git`)
+3. En **Local Path** elige dónde quieres que se guarde (por ejemplo, tu Escritorio)
+4. Haz clic en `Create Repository`
+5. GitHub Desktop creará la carpeta automáticamente y la mostrará lista en el panel principal
+
+> **Nota:** GitHub Desktop siempre crea una carpeta nueva con el nombre que escribiste. No selecciones una carpeta ya existente como Local Path — el resultado sería una carpeta dentro de otra.
+
+**Paso 2 — Mueve tu archivo al repositorio**
+1. Abre el Explorador de archivos (Windows) o Finder (Mac)
+2. Localiza `mi-perfil.md` (lo guardaste en el Escritorio al inicio)
+3. Muévelo dentro de la carpeta que GitHub Desktop acaba de crear (ejemplo: `Escritorio/mi-proyecto-git/`)
 
 **Paso 3 — Haz tu primer commit**
 1. En el panel **Changes** verás `mi-perfil.md` como archivo nuevo
@@ -195,6 +200,16 @@ Una **rama** es como una línea de tiempo alterna: puedes hacer cambios sin afec
 1. En GitHub Desktop, haz clic en **Current Branch** → **New Branch**
 2. Escribe el nombre (ejemplo: `feature/nueva-seccion`) → `Create Branch`
 3. Verás que la rama activa cambia en la barra superior
+
+> **¿Apareció un diálogo al cambiar de rama?** Es normal — GitHub Desktop te pregunta qué hacer si tienes cambios sin commit:
+>
+> | Opción | Qué hace | Cuándo usarla |
+> |---|---|---|
+> | **Leave my changes on [rama]** | Deja los cambios en la rama actual, sin llevártelos | Cuando quieres que esos cambios queden en la rama donde los hiciste |
+> | **Bring my changes to [nueva rama]** | Lleva los cambios a la rama a la que vas a cambiar | Cuando empezaste a editar en la rama equivocada |
+> | **Stash changes and switch branch** | Guarda los cambios temporalmente y cambia de rama | Cuando necesitas cambiar de rama rápido sin perder ni llevar los cambios |
+>
+> Para este ejercicio elige **Leave my changes on [rama]** si ya hiciste cambios en `main` que quieres dejar ahí.
 
 > **Así se ve la bifurcación en el historial:**
 
