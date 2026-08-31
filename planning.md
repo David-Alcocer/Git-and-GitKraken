@@ -1,12 +1,12 @@
 # Curso Básico: Git & GitHub con GitHub Desktop desde Cero
 **Dirigido a:** Estudiantes de nuevo ingreso
 
-**Duración:** 4.5 horas efectivas 
+**Duración:** ~6 horas efectivas
 
 **Modalidad:** 100% visual, usando GitHub Desktop como cliente gráfico y VS Code como editor de archivos Markdown
 
-**Distribución:** ~115 min trabajo individual · ~120 min trabajo en equipos · ~55 min teoría y cierre
- 
+**Distribución:** ~150 min trabajo individual · ~120 min trabajo en equipos · ~55 min teoría · ~35 min cierre y descanso
+
 ## Contenidos
 
 - El alumno conocerá la herramienta del control de versiones que le permitirá organizar y administrar sus archivos mediante Git y GitHub Desktop.
@@ -15,22 +15,27 @@
 
 - El alumno practicará la sintaxis de Markdown creando y editando archivos `.md` a lo largo de toda la sesión.
 
-- El alumno aprenderá las acciones push y pull para sincronizar cambios con GitHub.
+- El alumno aprenderá las acciones push, fetch y pull para sincronizar cambios con GitHub.
+
+- El alumno aprenderá a navegar el historial de commits con GitHub Desktop, GitLens y Git Graph.
+
+- El alumno conocerá las opciones para deshacer cambios en distintas etapas (Discard, Undo, Abort merge, Revert).
 
 - El alumno conocerá las maneras de poder corregir merge conflicts.
 
 
- 
 ## Requisitos previos
 - Laptop con Git instalado
 - VS Code instalado
 - Cuenta de GitHub creada previamente
 - Cuenta de correo verificada (no es necesaria el student developer pack)
 - GitHub Desktop instalado y cuenta vinculada
+- Extensiones de VS Code instaladas: **GitLens** y **Git Graph**
+
 ---
- 
+
 ## Agenda
- 
+
 ### Bloque 1 — Introducción (20 min) — Teoría (canva)
 - ¿Qué es el control de versiones y por qué existe?
 - Git vs. GitHub: la herramienta vs. la plataforma
@@ -62,15 +67,28 @@
 
 **☕ Descanso (10 min)**
 
-### Bloque 6 — Trabajo remoto: push (25 min) 🖐️ Individual
+### Bloque 6 — Trabajo remoto: Push, Fetch y Pull (25 min) 🖐️ Individual
 - ¿Qué es un remoto (remote)? origin y GitHub
 - Push: Publish repository / Push origin
-- Pull se explica conceptualmente: "es la operación inversa, la practicarán en equipo"
+- Diferencia entre Fetch y Pull: "Fetch = mirar el buzón, Pull = meter las cartas al escritorio"
 - GitHub.com se usa solo para verificar visualmente que los archivos llegaron (lectura, sin editar)
 - 📝 Mini actividad Markdown: agregar sección de reflexión en VS Code antes del push
 - Ejercicio: subir el repo de práctica a la cuenta personal de GitHub
 
-### Bloque 7 — Colaboración: Fork + equipo + Pull Request (45 min) 👥 Equipos
+### Bloque 7 — Viajando en el historial (20 min) 🖐️ Individual
+- Pestaña History en GitHub Desktop: leer diffs commit por commit
+- GitLens: blame inline, ver quién escribió cada línea y cuándo
+- Git Graph: árbol visual de commits y ramas (Git Graph: View Git Graph desde la paleta de comandos)
+- Concepto clave: mirar el historial no modifica nada, es como pausar un video
+
+### Bloque 8 — Si algo sale mal (15 min) 🖐️ Individual
+- **Discard changes**: descartar cambios antes de hacer commit (clic derecho en Changes → GitHub Desktop)
+- **Undo commit**: deshacer el último commit local no publicado
+- **Abort merge**: cancelar un merge en curso durante un conflicto
+- **Revert commit**: crear un commit nuevo que deshace uno ya publicado (opción segura)
+- Diferencia clave: Undo reescribe, Revert agrega — Revert es siempre seguro
+
+### Bloque 9 — Colaboración: Fork + equipo + Pull Request (45 min) 👥 Equipos
 - Líder del equipo: Fork del repo del instructor desde GitHub.com
 - Líder: agrega compañeros como collaborators en Settings del fork (GitHub.com, solo configuración)
 - Compañeros: aceptan invitación y clonan el fork del líder en GitHub Desktop
@@ -79,15 +97,16 @@
 - main del instructor protegido (codeowner): solo el instructor aprueba y mergea
 - Alumnos dejan comentarios en PRs ajenos (lectura + feedback, sin merge)
 
-### Bloque 8 — Resolviendo conflictos en equipos (40 min) 👥 Equipos
+### Bloque 10 — Resolviendo conflictos en equipos (40 min) 👥 Equipos
 - ¿Qué es un conflicto y por qué ocurre?
 - Dos integrantes editan la misma línea del archivo `.md` del equipo en ramas distintas
 - GitHub Desktop detecta el conflicto y abre VS Code para resolverlo
 - Entender las marcas `<<<<<<<`, `=======`, `>>>>>>>`
+- Si el conflicto da pánico: recordar Abort merge del Bloque 8
 - Ejercicio guiado dentro del fork del equipo
 
-### Bloque 9 — Mini proyecto integrador (35 min) 👥 Equipos
-- Continúan en el mismo fork del Bloque 7 (no clonar de nuevo)
+### Bloque 11 — Mini proyecto integrador (35 min) 👥 Equipos
+- Continúan en el mismo fork del Bloque 9 (no clonar de nuevo)
 - Cada integrante escribe una sección del `.md`, hace commit + push; los demás hacen Fetch + Pull
 - Push desde GitHub Desktop → PR al repo del instructor desde el navegador
 - Dejar comentario en el PR de otro equipo
@@ -105,11 +124,10 @@
 | Segmento | Tiempo |
 |---|---|
 | Teoría (Bloques 1–3) | 55 min |
-| Trabajo individual (Bloques 4–6) | 115 min |
-| Trabajo en equipos (Bloques 7–9) | 120 min |
+| Trabajo individual (Bloques 4–8) | 150 min |
+| Trabajo en equipos (Bloques 9–11) | 120 min |
 | Cierre | 20 min |
 | Descanso | 10 min |
-| **Total** | **~320 min (4h 20min)** |
+| **Total** | **~355 min (~6h)** |
 
 ---
-
