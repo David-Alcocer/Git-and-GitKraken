@@ -178,7 +178,7 @@ Tres ideas clave antes de empezar:
 4. Haz clic en **Commit to main**
 5. Verás el commit en la pestaña **History**
 
-**Ejercicio:** agrega contenido nuevo a `mi-perfil.md` y repite los pasos 1–4 hasta tener **3 o 4 commits**. Observa cómo el historial crece con cada uno.
+**Ejercicio:** agrega contenido nuevo a `mi-perfil.md` y repite los pasos del **Paso 3** (activar la casilla del archivo, escribir el mensaje y hacer commit) hasta tener **3 o 4 commits**. Observa cómo el historial crece con cada uno.
 
 > **Así se ve tu historial hasta ahora:**
 
@@ -363,7 +363,7 @@ Antes de trabajar en equipo, conoce los botones de "deshacer". Git tiene uno par
 | Situación | Qué usar | Dónde está |
 |---|---|---|
 | Guardaste el archivo pero **no hiciste commit** | **Discard changes** | Clic derecho sobre el archivo en *Changes* → GitHub Desktop |
-| Hiciste commit pero **no hiciste push** | **Undo commit** | Botón "Undo" que aparece justo después de comitear en GitHub Desktop |
+| Hiciste commit pero **no hiciste push** | **Undo commit** | Botón "Undo" que aparece justo después de comitear en GitHub Desktop — desaparece si navegas a otra pantalla, así que úsalo de inmediato |
 | Estás en medio de un merge conflictivo y quieres cancelar todo | **Abort merge** | Botón visible en GitHub Desktop durante el conflicto |
 | Ya hiciste push y el commit está en GitHub | **Revert commit** | Clic derecho sobre el commit en *History* → Revert |
 
@@ -380,7 +380,7 @@ Antes de trabajar en equipo, conoce los botones de "deshacer". Git tiene uno par
 #### 👑 Solo el líder del equipo
 
 **Paso 1 — Haz fork del repo del instructor**
-1. Ve al repositorio del instructor en GitHub
+1. Ve al repositorio del instructor en GitHub (el instructor te compartirá la URL en clase)
 2. Haz clic en `Fork` (esquina superior derecha) → `Create fork`
 3. Ahora tienes una copia del repo en tu cuenta: `tu-usuario/GitBasic`
 
@@ -410,13 +410,13 @@ Antes de trabajar en equipo, conoce los botones de "deshacer". Git tiene uno par
 
 *El líder hace esto primero:*
 1. En GitHub Desktop, crea una rama: **Current Branch** → **New Branch** → `equipo-[nombre]`
-2. Abre VS Code, crea el archivo `answers-box/equipo-[nombre].md` y escribe algo
+2. Abre VS Code, crea el archivo `equipo-[nombre].md` dentro de la carpeta `answers-box/` que ya existe en el repo, y escribe algo
 3. Regresa a GitHub Desktop, hace commit y luego **Push origin**
 
 *El resto del equipo hace esto después:*
 
 4. Haz clic en **Fetch origin** — esto le dice a GitHub Desktop que existe una rama nueva en el servidor
-5. Ve a **Current Branch** → busca la rama `equipo-[nombre]` del líder → cámbiante a ella
+5. Ve a **Current Branch** → busca la rama `equipo-[nombre]` del líder → cámbiate a ella
 6. Al cambiarte a esa rama, GitHub Desktop descarga automáticamente el contenido — verás el archivo del líder aparecer en tu VS Code
 
 > **¿Por qué funciona así?** Fetch avisa que la rama existe; cambiarte a ella la descarga. No necesitas hacer Pull por separado en este caso.
@@ -471,7 +471,7 @@ El archivo debe incluir esta estructura base — el líder la crea, los demás l
 >
 ```
 
-> Cada integrante contesta **una pregunta distinta** y deja su nombre en el campo *Responde*. Las preguntas no tienen salto de línea entre el título y la respuesta — descubran cuánto espacio necesitan.
+> Cada integrante contesta **una pregunta distinta** y escribe su respuesta debajo de la línea `*Responde:*` correspondiente. No hay un formato fijo — escribe lo que necesites en las líneas siguientes.
 
 > **¿Dónde encuentro la URL de mi foto de GitHub?** Ve a tu perfil en [github.com](https://github.com), clic derecho en tu foto → "Copiar dirección de imagen".
 
