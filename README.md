@@ -407,15 +407,25 @@ Antes de trabajar en equipo, conoce los botones de "deshacer". Git tiene uno par
 #### 🤝 Todo el equipo
 
 **Paso 5 — Practiquen Push y Pull en equipo**
-1. El líder crea una rama: **Current Branch** → **New Branch** → `equipo-[nombre]`
-2. El líder abre VS Code, crea el archivo `answers-box/equipo-[nombre].md` y escribe algo
-3. El líder hace commit y **Push origin** desde GitHub Desktop
-4. El resto del equipo hace clic en **Fetch origin** → **Pull origin** en GitHub Desktop
-5. Verán el archivo del líder aparecer en su VS Code — eso es un **Pull real**
+
+*El líder hace esto primero:*
+1. En GitHub Desktop, crea una rama: **Current Branch** → **New Branch** → `equipo-[nombre]`
+2. Abre VS Code, crea el archivo `answers-box/equipo-[nombre].md` y escribe algo
+3. Regresa a GitHub Desktop, hace commit y luego **Push origin**
+
+*El resto del equipo hace esto después:*
+
+4. Haz clic en **Fetch origin** — esto le dice a GitHub Desktop que existe una rama nueva en el servidor
+5. Ve a **Current Branch** → busca la rama `equipo-[nombre]` del líder → cámbiante a ella
+6. Al cambiarte a esa rama, GitHub Desktop descarga automáticamente el contenido — verás el archivo del líder aparecer en tu VS Code
+
+> **¿Por qué funciona así?** Fetch avisa que la rama existe; cambiarte a ella la descarga. No necesitas hacer Pull por separado en este caso.
 
 **Paso 6 — Manda el Pull Request al instructor**
-1. En GitHub Desktop, haz clic en **Create Pull Request** — se abrirá el navegador
-2. Verifica que el PR va desde tu rama en el fork → hacia el repo del instructor
+1. En GitHub Desktop, asegúrate de estar en la rama `equipo-[nombre]` → haz clic en **Create Pull Request** — se abrirá el navegador
+2. GitHub preselecciona automáticamente el repo del instructor como destino — solo verifica que diga:
+   - **base repository:** `instructor/GitBasic` ← `main`
+   - **head repository:** `tu-usuario/GitBasic` ← `equipo-[nombre]`
 3. Escribe un título descriptivo → `Create pull request`
 
 > El instructor tiene `main` protegido con revisión de **codeowner** obligatoria. Solo él puede aprobar y hacer merge — ustedes no verán ese botón disponible.
@@ -426,60 +436,11 @@ Antes de trabajar en equipo, conoce los botones de "deshacer". Git tiene uno par
 
 ---
 
-### <font color="#F05032">Bloque 10 — Resolviendo conflictos *(equipos)*</font>
+### <font color="#F05032">Bloque 10 — Proyecto final: perfiles en equipo + conflictos reales *(equipos)*</font>
 
-Un **conflicto** ocurre cuando dos personas modifican la misma línea del mismo archivo en ramas distintas.
+> Continúan en el mismo fork del Bloque 9. El objetivo es que cada integrante agregue **su perfil** al archivo `answers-box/equipo-[nombre].md` desde su propia rama. Al hacer merge, los conflictos surgirán solos.
 
-**Paso 1 — Provoca un conflicto (en equipo)**
-1. Los dos integrantes parten del mismo commit en la rama `equipo-[nombre]` del fork
-2. Cada uno crea su propia rama desde ahí y modifica **la misma línea** del archivo `answers-box/equipo-[nombre].md`
-3. El primero hace commit, push y merge a la rama del equipo — sin problema
-4. El segundo hace commit y push — GitHub Desktop le avisa del conflicto al intentar hacer merge
-
-> **Por qué ocurre el conflicto:**
-
-```mermaid
-gitGraph
-   commit id: "Base compartida"
-   branch rama-persona-B
-   checkout main
-   commit id: "Persona A edita línea X"
-   checkout rama-persona-B
-   commit id: "Persona B edita la misma línea X"
-   checkout main
-   merge rama-persona-B id: "Conflicto aquí"
-```
-
-**Paso 2 — Resuelve el conflicto**
-1. GitHub Desktop mostrará un mensaje de conflicto con un botón **Open in Visual Studio Code**
-2. VS Code abrirá el archivo con marcas como estas:
-
-```
-<<<<<<< HEAD
-Esta es mi versión del texto
-=======
-Esta es la versión de mi compañero
->>>>>>> feature/rama-compañero
-```
-
-3. Borra las marcas (`<<<<<<<`, `=======`, `>>>>>>>`) y deja solo el texto final que quieran conservar
-4. Guarda el archivo en VS Code
-5. Regresa a GitHub Desktop → haz clic en **Continue Merge** → luego commit
-
-> **Si el conflicto da pánico**, recuerda el Bloque 8: puedes hacer **Abort merge** y volver al estado anterior sin perder nada.
-
----
-
-### <font color="#F05032">Bloque 11 — Mini proyecto integrador *(equipos)*</font>
-
-**Reto final en equipos:**
-
-> Continúan en el mismo fork del Bloque 9 — no necesitan clonar nada nuevo. El líder ya tiene el fork y todos los compañeros ya lo tienen clonado.
-
-1. En GitHub Desktop, asegúrate de estar en la rama `equipo-[nombre]` del fork
-2. En VS Code, completa (o termina de completar) el archivo `answers-box/equipo-[nombre].md`
-3. Divídanse las secciones: cada integrante escribe una parte, hace commit y push — los demás hacen **Fetch + Pull** para recibir los cambios
-4. Completen todas las secciones **en equipo**:
+El archivo debe incluir esta estructura base — el líder la crea, los demás la completan:
 
 ```markdown
 # Equipo [Nombre]
@@ -491,33 +452,139 @@ Esta es la versión de mi compañero
 | | | |
 | | | |
 
-## Preguntas del reto
+## Perfiles
+
+<!-- cada integrante agrega aquí su sección con foto -->
+
+## Preguntas del equipo
 
 ### ¿Qué es la ingeniería de software?
-
-
+*Responde: [nombre de quien la contesta]*
 ### ¿Qué son las soft skills?
-
-
+*Responde: [nombre de quien la contesta]*
 ### ¿Cómo puedes usar la IA en tu carrera sin perder el protagonismo?
-
+*Responde: [nombre de quien la contesta]*
 
 ## Lo más valioso que aprendimos hoy
-
-> 
-
+>
 ## Una pregunta que nos quedó pendiente
-
-> 
+>
 ```
 
-5. Haz stage y commit en GitHub Desktop con el mensaje: `Reto final: equipo-[nombre]`
-6. Haz clic en **Push origin**
-7. En GitHub Desktop, haz clic en **Create Pull Request** — se abrirá el navegador
-8. Verifica que el PR apunta al repo del instructor → `Create pull request`
-9. Deja un comentario en el PR de otro equipo en GitHub (lectura y feedback solamente)
+> Cada integrante contesta **una pregunta distinta** y deja su nombre en el campo *Responde*. Las preguntas no tienen salto de línea entre el título y la respuesta — descubran cuánto espacio necesitan.
 
-> El instructor revisará y mergeará los PRs. Una vez aceptados, pueden entrar al repositorio del instructor en GitHub para ver los archivos de **todos los equipos** juntos en `answers-box/` — esa es la visualización final del trabajo colectivo.
+> **¿Dónde encuentro la URL de mi foto de GitHub?** Ve a tu perfil en [github.com](https://github.com), clic derecho en tu foto → "Copiar dirección de imagen".
+
+---
+
+**Paso 1 — El líder prepara la base**
+
+1. En la rama `equipo-[nombre]`, el líder abre `answers-box/equipo-[nombre].md` en VS Code
+2. Escribe una estructura inicial para que todos sepan qué deben llenar — sin llenar la parte de sus compañeros
+3. Hace commit y **Push origin**
+
+**Paso 2 — El resto del equipo se une a la rama del líder**
+
+1. Haz clic en **Fetch origin**
+2. Ve a **Current Branch** → busca `equipo-[nombre]` → cámbiate a ella
+3. Verás el archivo base que creó el líder en tu VS Code
+
+**Paso 3 — Cada integrante crea su propia rama desde ahí**
+
+Todos parten de la rama `equipo-[nombre]` que ya tiene la estructura base.
+
+1. En GitHub Desktop, asegúrate de estar en la rama `equipo-[nombre]`
+2. Haz clic en **Current Branch** → **New Branch**
+3. Nómbrala con tu nombre: `perfil-[tu-nombre]` (ejemplo: `perfil-ana`)
+4. Haz clic en `Create Branch`
+
+> **Así se ve el árbol cuando todos crean su rama:**
+
+```mermaid
+gitGraph
+   commit id: "archivo base del líder"
+   branch perfil-ana
+   branch perfil-carlos
+   branch perfil-samuel
+   checkout perfil-ana
+   commit id: "Ana agrega su perfil"
+   checkout perfil-carlos
+   commit id: "Carlos agrega su perfil"
+   checkout perfil-samuel
+   commit id: "Samuel agrega su perfil"
+```
+
+**Paso 4 — Cada integrante agrega su perfil al archivo**
+
+1. Abre `answers-box/equipo-[nombre].md` en VS Code
+2. Agrega tu sección con tu información — respeta la estructura que dejó el líder
+3. En GitHub Desktop: activa la casilla del archivo → escribe el mensaje `Agrego perfil de [tu-nombre]` → **Commit to perfil-[tu-nombre]**
+4. Haz clic en **Push origin**
+
+**Paso 5 — Cada integrante manda un Pull Request hacia la rama del líder**
+
+1. En GitHub (navegador), ve al fork del líder
+2. GitHub detectará tu rama recién subida y mostrará un botón **Compare & pull request** — haz clic
+3. Verifica que el PR diga:
+   - **base:** `equipo-[nombre]` ← rama del líder dentro del fork
+   - **compare:** `perfil-[tu-nombre]` ← tu rama
+4. Escribe un título descriptivo → `Create pull request`
+
+**Paso 6 — El líder mergea los PRs uno por uno**
+
+1. En GitHub, ve a la pestaña **Pull requests** del fork
+2. Abre el primer PR → **Merge pull request** — sin conflicto
+3. Abre el segundo PR → **Merge pull request** — aquí GitHub avisará que hay conflicto porque ambos tocaron el mismo archivo
+
+> **A partir del segundo PR casi seguro habrá conflicto.** Eso es normal y es exactamente lo que queremos que experimenten.
+
+**Paso 7 — El líder resuelve el conflicto**
+
+GitHub mostrará un botón **Resolve conflicts** — al abrirlo verás marcas como estas en el archivo:
+
+```
+<<<<<<< perfil-ana
+sección de Ana
+=======
+sección de Carlos
+>>>>>>> perfil-carlos
+```
+
+1. Borra las marcas (`<<<<<<<`, `=======`, `>>>>>>>`) y **conserva ambas secciones** — el objetivo es que queden todos los perfiles juntos
+2. Haz clic en **Mark as resolved** → **Commit merge**
+3. Repite con los PRs restantes
+
+> **Si el conflicto da pánico:** puedes cerrar el PR sin mergearlo y volver a intentarlo — nada se pierde.
+
+```mermaid
+gitGraph
+   commit id: "archivo base"
+   branch perfil-ana
+   branch perfil-carlos
+   checkout perfil-ana
+   commit id: "perfil Ana"
+   checkout equipo-nombre
+   merge perfil-ana id: "PR 1 — sin conflicto"
+   checkout perfil-carlos
+   commit id: "perfil Carlos"
+   checkout equipo-nombre
+   merge perfil-carlos id: "PR 2 — conflicto resuelto"
+```
+
+**Paso 8 — Pull Request final al instructor**
+
+1. En GitHub Desktop, cámbiate a `equipo-[nombre]` → haz **Fetch origin** para traer los merges que se hicieron en GitHub
+2. Haz clic en **Create Pull Request** — se abrirá el navegador
+3. Verifica que el PR diga:
+   - **base repository:** `instructor/GitBasic` ← `main`
+   - **head repository:** `tu-usuario/GitBasic` ← `equipo-[nombre]`
+4. Escribe un título descriptivo → `Create pull request`
+
+**Paso 9 — Deja feedback en el PR de otro equipo**
+1. Ve a la pestaña `Pull requests` del repo del instructor en GitHub
+2. Abre el PR de otro equipo y deja un comentario constructivo
+
+> El instructor revisará y mergeará los PRs. Una vez aceptados, entren al repositorio del instructor en GitHub — verán los perfiles de **todos los equipos** juntos en `answers-box/`. Esa es la foto final del trabajo colectivo.
 
 ---
 
