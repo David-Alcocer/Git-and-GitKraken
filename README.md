@@ -560,14 +560,15 @@ sección de Carlos
 gitGraph
    commit id: "archivo base"
    branch perfil-ana
+   checkout main
    branch perfil-carlos
    checkout perfil-ana
    commit id: "perfil Ana"
-   checkout equipo-nombre
+   checkout main
    merge perfil-ana id: "PR 1 — sin conflicto"
    checkout perfil-carlos
    commit id: "perfil Carlos"
-   checkout equipo-nombre
+   checkout main
    merge perfil-carlos id: "PR 2 — conflicto resuelto"
 ```
 
