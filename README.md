@@ -21,9 +21,9 @@ Bienvenido al curso. Aquí encontrarás todo lo que necesitas para seguir la ses
 <div align="center">
   <img src="images/logo-universidad_-_copia-640w.png" width="100" alt="UADY" />
   &nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="images/Negativo blanco.png" width="320" alt="Wewolf" />
+
   <br><br>
-  <em>Curso organizado por la Facultad de Matemáticas de la UADY · Vinculación FMAT x Wewolf</em>
+  <em>Curso organizado por la Facultad de Matemáticas de la UADY · Vinculación FMAT </em>
 </div>
 
 ---
